@@ -53,5 +53,14 @@ class IdeasController < ApplicationController
 
     redirect_to idea_path(@idea)
   end  
+
+  def destroy
+    @idea = Idea.find(params[:id])
+    @idea.destroy
+
+    redirect_to root_path
+
+    flash.notice = "#{@idea.title} was deleted!"
+  end
     
 end
