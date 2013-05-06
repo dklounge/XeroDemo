@@ -1,10 +1,26 @@
 <div class="container"> 
 
   <h2>Submit new ideas</h2>
+  
+  <%= form_for @idea do |idea| %>
+    <p>
+      <%= idea.label :idea_title %>
+      <%= idea.text_field :title %>
+    </p>
 
+    <p>
+      <%= idea.label :idea_body %>
+      <%= idea.text_area :body %>
+    </p>
+
+    <p>
+      <%= idea.submit %>
+    </p>
+
+  <% end %>
+  
   <p>
     <%= link_to "Back to ideas", root_path %>
   </p>
-
 
 </div>

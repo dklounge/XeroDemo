@@ -8,6 +8,17 @@ class IdeasController < ApplicationController
   end
 
   def new
+    @idea = Idea.new
+  end
 
+  def create
+    @idea = Idea.new(params[:idea])
+
+    if @idea.save
+      redirect_to action: :index
+    else
+      flash[:error] = @idea.errors.full_messages.to_sentence
+      render action: :new
+    end
   end
 end
