@@ -4,17 +4,17 @@
   
   <%= form_for @idea do |idea| %>
     <p>
-      <%= idea.label :idea_title %>
+      <%= idea.label :idea_headline %><br />
       <%= idea.text_field :title %>
     </p>
 
     <p>
-      <%= idea.label :idea_body %>
+      <%= idea.label :idea_detail %><br />
       <%= idea.text_area :body %>
     </p>
 
     <p>
-      <%= idea.submit %>
+      <%= idea.submit :Submit %>
     </p>
 
   <% end %>
