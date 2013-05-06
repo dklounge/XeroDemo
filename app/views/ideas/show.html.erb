@@ -1,2 +1,17 @@
-<h1>Ideas#show</h1>
-<p>Find me in app/views/ideas/show.html.erb</p>
+<div class="container"> 
+
+  <h2><%= @idea.title %></h2>
+  
+  <p>
+    <%= @idea.body %>
+  </p>
+  
+  <p>
+    <i>updated on <%= @idea.updated_at.to_date.to_formatted_s(:long) %></i>
+  </p>
+
+  <p>
+    <%= link_to "Back to ideas", root_path %>
+  </p>
+
+</div>
