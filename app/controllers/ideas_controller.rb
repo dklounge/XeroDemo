@@ -12,15 +12,21 @@ class IdeasController < ApplicationController
   end
 
   def create
-  #  @idea = Idea.new(idea_params)
-    @idea = Idea.new(params[:idea])
+  
+  @idea = Idea.new(params[:idea])
     if @idea.save
       redirect_to @idea
     else
-      render action :new
+      flash[:error] = @idea.errors.full_messages.to_sentence
+      render action: :new
     end
   end
-        
+  
+
+  #  not sure how to implement Rails 4 yet
+  #
+  #  @idea = Idea.new(idea_params)
+  #      
   #   respond_to do |f|
   #     if @idea.save
   #       format.html { redirect_to @idea, notice: "Thanks for your great idea!" }
@@ -38,6 +44,14 @@ class IdeasController < ApplicationController
   #     def idea_params
   #       params.require(:idea).permit(:title, :body)
   #     end
-  
+
+  def update
+    @idea = Idea.find(params[:id])
+    @idea.update_attributes(params[:id])
+
+    flash.notice = "#{@idea.title} was successfully updated!"
+
+    redirect_to idea_path(@idea)
+  end  
     
 end

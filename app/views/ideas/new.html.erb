@@ -2,23 +2,8 @@
 
   <h2>Submit new ideas</h2>
   
-  <%= form_for @idea do |idea| %>
-    <p>
-      <%= idea.label :idea_headline %><br />
-      <%= idea.text_field :title %>
-    </p>
+  <%= render partial: 'form' %>
 
-    <p>
-      <%= idea.label :idea_detail %><br />
-      <%= idea.text_area :body %>
-    </p>
-
-    <p>
-      <%= idea.submit :Submit %>
-    </p>
-
-  <% end %>
-  
   <p>
     <%= link_to "Back to ideas", root_path %>
   </p>
