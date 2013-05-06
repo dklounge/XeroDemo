@@ -1,7 +1,9 @@
 class Idea < ActiveRecord::Base
+  include ActiveModel::ForbiddenAttributesProtection
   attr_accessible :title, :body
 
-  include ActiveModel::ForbiddenAttributesProtection
-  validates :idea, presence: true, uniqueness: true
+  
+  validates :title, presence: true, uniqueness: true
+  validates :body, presence: true, uniqueness: true
 
 end
