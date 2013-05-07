@@ -45,9 +45,16 @@ class IdeasController < ApplicationController
   #       params.require(:idea).permit(:title, :body)
   #     end
 
+  def edit
+    @idea = Idea.find(params[:id])
+  end
+
   def update
     @idea = Idea.find(params[:id])
-    @idea.update_attributes(params[:id])
+
+    # update_attributes is gone in Rails 4
+    # ??? not sure about the syntax of these arguments
+    @idea.update_columns(title: params[:idea][:title], body: params[:idea][:body])
 
     flash.notice = "#{@idea.title} was successfully updated!"
 
