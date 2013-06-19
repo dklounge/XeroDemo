@@ -13,6 +13,8 @@
   <h4>comment</h4>
   <%= render partial: 'ideas/comment', collection: @idea.comments %>
 
+  <%= render partial: 'comments/form' %>
+
   <p>
     <%= link_to "Back to home", root_path %> |
     <%= link_to "Edit summary", edit_idea_path(@idea) %> |
