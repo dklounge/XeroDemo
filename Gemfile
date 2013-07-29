@@ -9,8 +9,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 # For Xero
 gem 'xeroizer'
 
-# for Facbeook omniauth
-gem 'omniauth-facebook'
+# for social omniauth
+# gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

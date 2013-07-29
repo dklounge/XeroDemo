@@ -4,7 +4,7 @@ class XeroSessionController < ApplicationController
 
 	public 
 	  def new
-	  	request_token = @xero_client.request_token(:oauth_callback => 'http://127.0.0.1:3000/')
+	  	request_token = @xero_client.request_token(:oauth_callback => 'http://xerodemo.herokuapp.com/')
       session[:request_token] = request_token.token
       session[:request_secret] = request_token.secret
 
