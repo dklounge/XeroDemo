@@ -1,4 +1,7 @@
 Thinkado::Application.routes.draw do
+  get "xero_session/new"
+  get "xero_session/create"
+  get "xero_session/destroy"
   root to: 'ideas#index'
 
   resources :ideas do
