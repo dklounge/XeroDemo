@@ -1,7 +1,7 @@
 A demo app for Xero
 -------------------
 
-# Setup
+## Setup
 
 * Running on Ruby 2.0.0 with Rails 4.0
 * Fork then clone on your local to run the code
@@ -12,12 +12,17 @@ A demo app for Xero
 
 ## To deploy to heroku
 
+> Keep in mind if there is local data migration, you may need to also migrate at heroku:
+`$ heroku run rake db:migrate`
+
+> Thereafter you're ready to deploy.
+
 `$ git push heroku master`
 
 ## Troubleshooting
 
 >If you can push to git, but receive `Permission denied (publickey)` error when pushing to heroku, try adding public key to heroku (after ensuring you have public keys).
 
-`heroku keys:add ~/.ssh/id_rsa.pub`
+`$ heroku keys:add ~/.ssh/id_rsa.pub`
 
 see Stackoverflow [thread on this topic](http://stackoverflow.com/questions/16384655/git-push-heroku-master-error-permission-denied-publickey)
