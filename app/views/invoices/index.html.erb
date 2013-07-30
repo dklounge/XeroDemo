@@ -3,19 +3,19 @@
   <h2>Xero Invoices</h2>
 
   <p>
-    Welcome to Xero Invoices - click link below to authenticate:
+    Welcome to a Xero Demo!
   </p>
 
   <div class="xero_session">
     <%= link_to "Authenticate Xero Session", xero_session_new_path %>
   </div>
 
-  <ul id="ideas">
-    <% @invoices.each do |invoice| %>
+  <ul id="invoices">
+    
       <li>
-        <%= link_to invoice.title, invoice_path(invoice) %>
+        <%= @invoices.inspect %>
       </li>
-    <% end %>
+
   </ul>
 
 </div>
