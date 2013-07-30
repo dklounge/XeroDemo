@@ -4,7 +4,7 @@ class XeroSessionController < ApplicationController
 
 	public 
 	  def new
-	  	request_token = @xero_client.request_token(:oauth_callback => 'http://api.xero.com/')
+	  	request_token = @xero_client.request_token(:oauth_callback => 'invoices/show')
       session[:request_token] = request_token.token
       session[:request_secret] = request_token.secret
 
