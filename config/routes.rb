@@ -6,7 +6,6 @@ XeroDemo::Application.routes.draw do
   root to: 'invoices#index'
 
   get "invoices/show"
-  get "invoices/index"
 
   resources :ideas do
     resources :comments

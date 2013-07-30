@@ -2,7 +2,8 @@ class InvoicesController < ApplicationController
 
   def index
   #	@clients = xero_client.Contact.all
-  @invoices = xero_client.Invoice.all
+  	@methods = xero_client.methods.sort
+  	@invoices = xero_client.Invoice
   end
 
 	def show
