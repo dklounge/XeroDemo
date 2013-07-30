@@ -2,8 +2,8 @@ class InvoicesController < ApplicationController
 
   def index
     # debugger 
-    # @clients = xero_client.Contact.all
-    @invoices = xero_client.Invoice
+    @clients = xero_client.Contact.inspect
+    @invoices = xero_client.Invoice.inspect
   end
 
 	def show

@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
     end
 
     @xero_client
-
-  end
+   end
 
 end
