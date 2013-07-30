@@ -1,20 +1,12 @@
 class InvoicesController < ApplicationController
 
   def index
-    # debugger 
-    @clients = xero_client.Contact.inspect
-    @invoices = xero_client.Invoice.inspect
+  #	@clients = xero_client.Contact.all
+  @invoices = xero_client.Invoice.all
   end
 
 	def show
-		@results = []
-		
-		url = URI.parse('https://api.xero.com/api.xro/2.0/Invoices') # URL of the call
-		response = http.get('https://api.xero.com/api.xro/2.0/Invoices')
-		# response = {"ID"=> 123,
-		# 	"body"=> 'is a string'}
 
-		@results = JSON.parse response.to_json
 	end 
 
 	# def index
