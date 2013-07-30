@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 	
 	def xero_client
 		return @xero_client if @xero_client
+  
     @xero_client = Xeroizer::PublicApplication.new('OD3NOFPQLZ5BBB0XOPPGMIIXIAZAZE', '5SJUFTIJGBGV0AZIZRT4RFDGEQXGP5')
 
     # Add AccessToken if authorised previously.
@@ -18,6 +19,7 @@ class ApplicationController < ActionController::Base
     end
 
     @xero_client
+
   end
 
 end
