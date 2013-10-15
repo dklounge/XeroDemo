@@ -15,8 +15,7 @@ class IdeasController < ApplicationController
   end
 
   def create
-  
-  @idea = Idea.new(params[:idea])
+    @idea = Idea.new(params[:idea])
     if @idea.save
       redirect_to @idea
     else
@@ -24,12 +23,12 @@ class IdeasController < ApplicationController
       render action: :new
     end
   end
-  
+
 
   #  not sure how to implement Rails 4 yet
   #
   #  @idea = Idea.new(idea_params)
-  #      
+  #
   #   respond_to do |f|
   #     if @idea.save
   #       format.html { redirect_to @idea, notice: "Thanks for your great idea!" }
@@ -62,7 +61,7 @@ class IdeasController < ApplicationController
     flash.notice = "#{@idea.title} was successfully updated!"
 
     redirect_to idea_path(@idea)
-  end  
+  end
 
   def destroy
     @idea = Idea.find(params[:id])
@@ -72,5 +71,5 @@ class IdeasController < ApplicationController
 
     flash.notice = "#{@idea.title} was deleted!"
   end
-    
+
 end
