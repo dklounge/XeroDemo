@@ -3,10 +3,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'rest-client'
+gem 'json', '~> 1.8.0'
 
 gem 'xeroizer'
+gem 'omniauth'
 # gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'better_errors', '>= 0.7.2',:group => :development
 
 gem 'jquery-rails'
@@ -21,6 +24,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'sass-rails', '~> 4.0.0'
+  gem 'haml-rails'
 end
 
 group :development, :test do

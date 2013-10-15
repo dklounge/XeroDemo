@@ -17,3 +17,6 @@
 
 # Ignore other files
 auth*
+
+# Ignore application configuration
+/config/application.yml
